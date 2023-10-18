@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import ExternalLink from "@/components/ExternalLink";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
       <>
-        <div className={'container mx-auto pt-20'}>
+        <div className={'container mx-auto h-[100vh] bg-black bg-fixed'}
+        style={{
+            backgroundImage: "url('/images/bg_test.jpeg')",
+        }}>
             <div className={'grid flex-col gap-4 justify-items-center'}>
                 <div className={'row-span-1 bg-gray-200 content-center p-3 rounded-full'}>
                     <Image src={'/images/foto2.jpeg'} className={'rounded-full'} width={200} height={200} />
@@ -12,7 +16,7 @@ export default function Home() {
                 <div className={'row-span-1 color-white'}>
                     <h1 className={'text-4xl font-bold'}>RIFKI06</h1>
                 </div>
-                <div className={'row-span-1 color-white'}>
+                <div className={'row-span-1 text-black'}>
                     <p className={''}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
@@ -25,6 +29,14 @@ export default function Home() {
                 </div>
             </div>
         </div>
+            <Navbar />
+          <div className="container h-[100vh]">
+                <div className="grid grid-cols-3 gap-4">
+                    <div className="col-span-1 bg-gray-800">
+                        <h1 className="text-4xl font-bold">My Project</h1>
+                    </div>
+                </div>
+          </div>
       </>
   )
 }
