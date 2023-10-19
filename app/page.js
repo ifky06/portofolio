@@ -9,14 +9,14 @@ export default function Home() {
         style={{
             backgroundImage: "url('/images/bg_test.jpeg')",
         }}>
-            <div className={'grid flex-col gap-4 justify-items-center'}>
-                <div className={'row-span-1 bg-gray-200 content-center p-3 rounded-full'}>
+            <div className={'grid flex-col gap-4 justify-items-center lg:pt-20 pt-24 transition-all duration-300 delay-100'}>
+                <div className={'row-span-1 from-cyan-500 to-blue-500 content-center p-3 rounded-full bg-gradient-to-bl lg:max-w-full max-w-[40%] transition-all duration-300 delay-100'}>
                     <Image src={'/images/foto2.jpeg'} className={'rounded-full'} width={200} height={200} />
                 </div>
                 <div className={'row-span-1 color-white'}>
                     <h1 className={'text-4xl font-bold'}>RIFKI06</h1>
                 </div>
-                <div className={'row-span-1 text-black'}>
+                <div className={'row-span-1 text-white'}>
                     <p className={''}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>

@@ -58,7 +58,7 @@ export default function ExternalLink() {
         <>
             <div className={'flex flex-row justify-center items-center'}>
                 {ExternalLinkItem.map((link) => (
-                    <div key={link.id} className={'flex flex-col py-2 px-6 justify-center items-center'}>
+                    <div key={link.id} className={'flex flex-col py-2 px-2 lg:px-6 justify-center items-center transition-all duration-300'}>
                         <div id={'icon-'+link.id} className={'bg-gray-200 text-2xl p-3 rounded-full duration-100 w-12 h-12 flex justify-center items-center text-center z-20'}
                              onClick={handleLink.bind(this,link.url)} onMouseOver={handleMouseOver.bind(this,link.id)} onMouseOut={handleMouseLeave.bind(this,link.id)}>
                             {link.icon}
