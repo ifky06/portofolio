@@ -2,7 +2,7 @@ import Image from "next/image";
 import ExternalLink from "@/components/ExternalLink";
 import SanityClient from "@/utils/SanityClient";
 import ParallaxBackground from "@/components/ParallaxBackground";
-import StartButton from "@/components/StartButton";
+import LargeButton from "@/components/LargeButton";
 
 async function getData() {
     const res = await SanityClient.getClient()?.fetch(`*[_type == "profile"]{name, bio, "imgUrl": image.asset->url, "bgUrl": background.asset->url}`);
@@ -32,7 +32,7 @@ export default async function Header() {
                     <div className={'h-[8px] bg-gradient-to-bl from-cyan-500 to-blue-500 w-[15rem] rounded-full'}/>
                 </div>
                 <div className={'text-black p-4 scale-[85%] lg:scale-100 transition-all'}>
-                    <StartButton />
+                    <LargeButton id={'start-button'} title={'START'} link={'#techStack'} className={'text-2xl px-40 py-3 rounded-full font-extrabold'} />
                 </div>
                 <div className={'row-span-1'}>
                     <ExternalLink />
