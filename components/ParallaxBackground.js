@@ -3,15 +3,20 @@
 import {useEffect} from "react";
 
 export default function ParallaxBackground({ImageURL}) {
-    useEffect(() => {
-        window.addEventListener('scroll', function () {
-            let parallax = document.getElementById('parallax');
-            let scrollPosition = window.pageYOffset;
-            // if (scrollPosition > 100*2){
+    const parallaxEffect = () => {
+        let parallax = document.getElementById('parallax');
+        let scrollPosition = window.pageYOffset;
+        if (parallax) {
             parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-            // }
-        }, false);
+        }
+    }
 
+    useEffect(() => {
+        window.addEventListener('scroll', parallaxEffect, false);
+
+        return () => {
+            window.removeEventListener('scroll', parallaxEffect, false);
+        }
     }, []);
 
     return(

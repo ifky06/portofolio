@@ -3,6 +3,7 @@ import ExternalLink from "@/components/ExternalLink";
 import SanityClient from "@/utils/SanityClient";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import LargeButton from "@/components/LargeButton";
+import Line from "@/components/Line";
 
 async function getData() {
     const res = await SanityClient.getClient()?.fetch(`*[_type == "profile"]{name, bio, "imgUrl": image.asset->url, "bgUrl": background.asset->url}`);
@@ -29,7 +30,7 @@ export default async function Header() {
                     </p>
                 </div>
                 <div className={'row-span-1 scale-[85%] lg:scale-100 transition-all'}>
-                    <div className={'h-[8px] bg-gradient-to-bl from-cyan-500 to-blue-500 w-[15rem] rounded-full'}/>
+                    <Line className="h-[8px] w-[15rem]"/>
                 </div>
                 <div className={'text-black p-4 scale-[85%] lg:scale-100 transition-all'}>
                     <LargeButton id={'start-button'} title={'START'} link={'#techStack'} className={'text-2xl px-40 py-3 rounded-full font-extrabold'} />
