@@ -16,7 +16,7 @@ function ProjectCard({title, image, slug}) {
 }
 
 export default async function MyProject() {
-    const projectList = await Project.getProjects();
+    const projectList = await Project.getFeaturedProjects();
     return (
         <div className="max-w-screen min-h-fit bg-[#0a0c21] mb-32">
             <div className="mx-auto h-full flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ export default async function MyProject() {
                         )
                     )}
                 </div>
-                <LargeButton id={'see-more-button'} title={'See More....'} link={'/'} className={'text-xl px-36 py-2 rounded-md font-bold'}/>
+                <LargeButton id={'see-more-button'} title={'See More....'} link={'/project'} className={'text-xl px-36 py-2 rounded-md font-bold'}/>
             </div>
         </div>
     )
