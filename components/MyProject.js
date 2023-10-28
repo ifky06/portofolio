@@ -18,7 +18,7 @@ function ProjectCard({title, image, slug}) {
 export default async function MyProject() {
     const projectList = await Project.getFeaturedProjects();
     return (
-        <div className="max-w-screen min-h-fit bg-[#0a0c21] mb-32">
+        <div className="max-w-screen min-h-fit bg-[#0a0c21] mb-5">
             <div className="mx-auto h-full flex flex-col justify-center items-center">
                 <div className="text-4xl font-bold text-white pt-10 pb-2 transition-all scale-[85%] lg:scale-100">My Project</div>
                 <Line className="h-[5px] w-[15rem] "/>

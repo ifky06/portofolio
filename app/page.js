@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import TechStack from "@/components/TechStack";
 import MyProject from "@/components/MyProject";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Navbar />
           <TechStack />
           <MyProject />
+          <Footer />
       </>
   )
 }
