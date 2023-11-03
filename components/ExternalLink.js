@@ -8,7 +8,7 @@ const ExternalLinkItem = [
     {
         id: 'id1',
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in//",
+        url: "https://www.linkedin.com/in/ahmad-rifki-2aa503235/",
         icon: <FaLinkedin className={'text-black'}/>
     },
     {

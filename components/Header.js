@@ -4,15 +4,10 @@ import SanityClient from "@/utils/SanityClient";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import LargeButton from "@/components/LargeButton";
 import Line from "@/components/Line";
-
-async function getData() {
-    const res = await SanityClient.getClient()?.fetch(`*[_type == "profile"]{name, bio, "imgUrl": image.asset->url, "bgUrl": background.asset->url}`);
-    return res[0];
-}
+import Profile from "@/models/Profile";
 
 export default async function Header() {
-    const data = await getData();
-
+    const data = await Profile.getProfile();
 
     return(
         <div className={'container mx-auto h-[100vh] bg-fixed'}>

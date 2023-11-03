@@ -18,8 +18,6 @@ const component = {
 export default async function({params}){
     const project = await Project.getProjectBySlug(params.slug);
     return (
-        <>
-            <Navbar />
         <div className="container mx-auto text-light pt-10 transition-all">
             <div className="flex justify-center">
                 <img className="w-1/2 rounded-xl" src={project.imgUrl}/>
@@ -35,6 +33,5 @@ export default async function({params}){
                 <PortableText value={project.content} components={component} />
             </div>
         </div>
-        </>
     )
 }
