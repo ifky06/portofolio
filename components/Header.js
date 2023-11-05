@@ -10,7 +10,7 @@ export default async function Header() {
     const data = await Profile.getProfile();
 
     return(
-        <div className={'container mx-auto h-[100vh] bg-fixed'}>
+        <div className={'lg:container lg:mx-auto mx-[-20px] h-[100vh] bg-fixed'}>
                 <ParallaxBackground ImageURL={data['bgUrl']} />
             <div className={'grid flex-col gap-4 justify-items-center items-center lg:pt-10 pt-14 transition-all duration-300 delay-100'}>
                 <div className={'row-span-1 from-cyan-500 to-blue-500 content-center p-3 rounded-full bg-gradient-to-bl lg:max-w-full max-w-[40%] transition-all duration-300 delay-100'}>

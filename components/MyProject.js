@@ -31,7 +31,7 @@ export default async function MyProject() {
                         )
                     )}
                 </div>
-                <LargeButton id={'see-more-button'} title={'See More....'} link={'/project'} className={'text-xl px-36 py-2 rounded-md font-bold'}/>
+                <LargeButton id={'see-more-button'} title={'See More....'} link={'/project'} className={'text-xl lg:px-36 px-20  py-2 rounded-md font-bold'}/>
             </div>
         </div>
     )

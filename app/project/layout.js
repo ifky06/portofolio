@@ -1,12 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Profile from "@/models/Profile";
 
-export default function ProjectLayout({ children }) {
+export default async function ProjectLayout({ children }) {
+    const data = await Profile.getProfile();
     return (
         <>
-            <Navbar />
+            <Navbar profileName={data.nickname} />
             {children}
-            <Footer />
+            <Footer profileName={data.nickname} />
         </>
     )
 }
