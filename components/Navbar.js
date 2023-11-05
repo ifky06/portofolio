@@ -4,16 +4,13 @@ import MenuButton from "@/components/MenuButton";
 import MenuList from "@/components/MenuList";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({profileName}) {
     const [isOpen, setIsOpen] = useState(false);
 
-
-
-
     return(
-            <nav className="py-4 px-5 text-[#D6F6DD] bg-[#102542] sticky top-0 z-50">
+            <nav className="py-4 px-5 text-white bg-[#102542] sticky top-0 z-50">
                 <div className="container mx-auto lg:grid lg:grid-cols-3 flex justify-between items-center">
-                    <div className="text-2xl font-bold items-center">Rifki06</div>
+                    <div className="text-2xl font-bold items-center">{profileName}</div>
                     <ul className="lg:flex justify-center space-x-4 hidden">
                         <li><Link href="/" className="hover:text-gray-300 font-bold px-3">Home</Link></li>
                         <li><Link href="/project" className="hover:text-gray-300 font-bold px-3">My Project</Link></li>

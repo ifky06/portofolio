@@ -5,8 +5,8 @@ import {useEffect} from "react";
 export default function ParallaxBackground({ImageURL}) {
     const parallaxEffect = () => {
         let parallax = document.getElementById('parallax');
-        let scrollPosition = window.pageYOffset;
         if (parallax) {
+        let scrollPosition = window.pageYOffset;
             parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
         }
     }

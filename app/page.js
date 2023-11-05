@@ -7,17 +7,20 @@ import MyProject from "@/components/MyProject";
 import Footer from "@/components/Footer";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
+import {data} from "autoprefixer";
+import Profile from "@/models/Profile";
 
-export default function Home() {
+export default async function Home() {
+   const data = await Profile.getProfile();
   return (
       <>
-          {/*<Suspense fallback={<Loading />}>*/}
+          <Suspense fallback={<Loading />}>
           <Header />
-          <Navbar />
+          <Navbar profileName={data.nickname} />
           <TechStack />
           <MyProject />
-          <Footer />
-          {/*</Suspense>*/}
+          <Footer profileName={data.nickname} />
+          </Suspense>
       </>
   )
 }
